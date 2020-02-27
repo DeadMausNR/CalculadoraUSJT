@@ -8,7 +8,7 @@ public class Calculadora {
         loop: do {
 
             System.out.println("------------- Calculadora -------------");
-            System.out.println("Escolha o metodo de calculo:\n1 - Soma\n2 - Subtracao\n0 - Sair");
+            System.out.println("Escolha o metodo de calculo:\n1 - Soma\n2 - Subtracao\n3 - Multiplicacao\n4 - Divisao\n0 - Sair");
 
             try {
                 switch (Integer.parseInt(sn.nextLine())) {
@@ -17,6 +17,12 @@ public class Calculadora {
                         break;
                     case 2:
                         Subtracao();
+                        break;
+                    case 3:
+                        Multiplicacao();
+                        break;
+                    case 4:
+                        Divisao();
                         break;
                     case 0:
                         break loop;
@@ -62,6 +68,30 @@ public class Calculadora {
         int val2 = Integer.parseInt(sn.nextLine());
 
         System.out.println("A subtracao dos dois valores é: " + (val1 - val2));
+        System.out.println("Pressione enter para voltar para o menu!");
+        sn.nextLine();
+    }
+
+    public static void Multiplicacao(){
+        System.out.print("Digite o primeiro valor inteiro: ");
+        int val1 = Integer.parseInt(sn.nextLine());
+
+        System.out.print("Digite o segundo valor inteiro: ");
+        int val2 = Integer.parseInt(sn.nextLine());
+
+        System.out.println("A multiplicacao dos dois valores é: " + (val1 * val2));
+        System.out.println("Pressione enter para voltar para o menu!");
+        sn.nextLine();
+    }
+
+    public static void Divisao(){
+        System.out.print("Digite o primeiro valor inteiro: ");
+        int val1 = Integer.parseInt(sn.nextLine());
+
+        System.out.print("Digite o segundo valor inteiro (Maior que zero): ");
+        int val2 = Integer.parseInt(sn.nextLine());
+
+        System.out.println("A divisao dos dois valores é: " + (val1 / val2));
         System.out.println("Pressione enter para voltar para o menu!");
         sn.nextLine();
     }
